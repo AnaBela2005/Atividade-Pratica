@@ -39,3 +39,51 @@ pipe_image = pygame.image.load('assets/pipe.png').convert_alpha()
 
 # Definir fonte para pontuação
 score_font = pygame.font.Font('assets/04B_19.ttf', 30)
+
+# Definir variáveis de jogo
+score = 0
+game_over = False
+
+ 
+
+# Função para reiniciar o jogo
+def reset_game():
+    global bird_y, pipe_x, pipe_y, score, game_over
+    bird_y = 200
+    pipe_x = WIDTH
+    pipe_y = random.randint(100, HEIGHT - PIPE_GAP - 100)
+    score = 0
+    game_over = False
+
+ 
+
+# Iniciar pygame
+pygame.init()
+
+ 
+
+# Definir loop principal do jogo
+while True:
+
+ 
+
+    # Verificar eventos de entrada
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            pygame.quit()
+            sys.exit()
+
+ 
+
+        # Detectar pressionamento de tecla para movimentar o pássaro
+        if event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_SPACE:
+                bird_y -= 50
+
+ 
+
+            # Reiniciar jogo se pressionar R
+            if event.key == pygame.K_r and game_over:
+                reset_game()
+                
+                
