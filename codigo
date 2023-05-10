@@ -1,0 +1,18 @@
+import pygame
+import sys
+import random
+
+# Definir dimensões da janela
+WIDTH = 288
+HEIGHT = 512
+
+# Definir cor de fundo
+BACKGROUND_COLOR = (0, 255, 255)
+
+# Definir velocidade do pássaro e da gravidade
+BIRD_SPEED = 5
+GRAVITY = 0.5
+
+# Definir posição inicial do pássaro
+bird_x = 50
+bird_y = 200
