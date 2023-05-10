@@ -16,3 +16,16 @@ GRAVITY = 0.5
 # Definir posição inicial do pássaro
 bird_x = 50
 bird_y = 200
+# Definir tamanho do pássaro
+BIRD_WIDTH = 34
+BIRD_HEIGHT = 24
+
+# Definir posição dos canos
+PIPE_GAP = 100
+PIPE_WIDTH = 52
+PIPE_HEIGHT = 320
+pipe_x = WIDTH
+pipe_y = random.randint(100, HEIGHT - PIPE_GAP - 100)
+
+# Definir tamanho da tela
+screen = pygame.display.set_mode((WIDTH, HEIGHT))
