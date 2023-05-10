@@ -29,3 +29,13 @@ pipe_y = random.randint(100, HEIGHT - PIPE_GAP - 100)
 
 # Definir tamanho da tela
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
+
+# Carregar imagens do pássaro e do fundo
+bird_image = pygame.image.load('assets/bird.png').convert_alpha()
+background_image = pygame.image.load('assets/background.png').convert()
+
+# Carregar imagem do cano
+pipe_image = pygame.image.load('assets/pipe.png').convert_alpha()
+
+# Definir fonte para pontuação
+score_font = pygame.font.Font('assets/04B_19.ttf', 30)
